@@ -1,36 +1,36 @@
 # wunderground
 
-FIXME: description
+A command-line utility to look up weather data by zip code or city / state.  An exercise in learning Clojure
 
 ## Installation
 
-Download from http://example.com/FIXME.
+Download from https://github.com/druidix/wunderground
 
 ## Usage
 
-FIXME: explanation
-
-    $ java -jar wunderground-0.1.0-standalone.jar [args]
+-  Start a Clojure REPL
+-  Look up Napa, California, U.S:
+   -  (-main '94558)
 
 ## Options
 
-FIXME: listing of options this app accepts.
+None at this time
 
 ## Examples
 
-...
+In a Clojure REPL:
+   (-main '94558)
 
-### Bugs
+### Known Issues:
 
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
+-  Currently only works in REPL, not using 'lein run'.
+   -  Need to figure out how to pass zip code as an arg when using 'lein run'
+-  No validation or sanitization of input params
+-  City / State not yet supported
 
 ## License
 
-Copyright © 2016 FIXME
+Copyright © 2017 Kaushik Acharya
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
