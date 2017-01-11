@@ -11,7 +11,7 @@
   [& args]
   (def api-key "367af81f6daa0a7b")
   (def api-base-url "http://api.wunderground.com/api/")
-  (def weather-query "/conditions/q/CA/94558.json")
+  (def weather-query (str "/conditions/q/" (parse-int (str args)) ".json"))
   (def query-url (str api-base-url api-key weather-query))
                                         ;(prn 'URL  query-url)
   (client/get query-url
@@ -24,6 +24,7 @@
                                         ;(println "Async HTTP GET body: " body)
                 (let [body-map (json/read-str body)]
                   (do
-                    (println "Current temp in" (parse-int (str args)) ":  "
-                             (get-in body-map ["current_observation" "temp_c"]) "C\n"
-                             "Station ID:  " (get-in body-map ["current_observation" "station_id"]) "\n"))))))))
+                    (println "Current temp in" (parse-int (str args))
+                             (str '\( (get-in body-map ["current_observation" "display_location" "full"]) "): " )
+                             (str (get-in body-map ["current_observation" "temp_c"]) " C\n")
+                             (str "Station ID:  " (get-in body-map ["current_observation" "station_id"]) "\n")))))))))
