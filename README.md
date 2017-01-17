@@ -19,12 +19,10 @@ None at this time
 ## Examples
 
 In a Clojure REPL:
-   (-main '94558)
+   (-main 94558)
 
 ### Known Issues:
 
--  Currently only works in REPL, not using 'lein run'.
-   -  Need to figure out how to pass zip code as an arg when using 'lein run'
 -  No validation or sanitization of input params
 -  City / State not yet supported
 
