@@ -10,7 +10,7 @@ Download from https://github.com/druidix/wunderground
 
 -  Start a Clojure REPL
 -  Look up Napa, California, U.S:
-   -  (-main '94558)
+   -  (-main 94558)
 
 ## Options
 
