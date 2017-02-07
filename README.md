@@ -24,7 +24,6 @@ In a Clojure REPL:
 ### Known Issues:
 
 -  No validation or sanitization of input params
--  City / State not yet supported
 
 ## License
 
