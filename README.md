@@ -1,6 +1,6 @@
 # wunderground
 
-A command-line utility to look up weather data by zip code or city / state.  An exercise in learning Clojure
+A command-line utility to look up weather data by zip code.  An exercise in learning Clojure
 
 ## Installation
 
